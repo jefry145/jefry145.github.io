@@ -1,0 +1,26 @@
+<div id="Formulario" class="font-mono drop-shadow-md">
+<div class="content_form px-4 py-3">
+    <p class="text-center text-xl">Operaciones Aritmeticas</p>
+<label for="valor1">Ingrese un valor:</label>
+    <input class="form-control" type="number" [(ngModel)]="valor1" (input)="operaciones()" name="valor1" id="valor1">
+<label for="valor2">Ingrese un valor:</label>
+    <input class="form-control" type="number" [(ngModel)]="valor2" (input)="operaciones()" name="valor2"  id="valor2">
+<label for="list">Escoja una operaciòn aritmetica:</label>
+    <select class="form-control" name="" id="list" [(ngModel)]="num_valor" (ngModelChange)="operaciones()">
+    <option value="0">Operaciones</option>
+    <option value="1">suma</option>
+    <option value="2">resta</option>
+    <option value="3">multiplicaciòn</option>
+    <option value="4">divisiòn</option>
+</select>
+<div >
+   <div [ngSwitch]="num_valor">
+      <div *ngSwitchCase="'1'" [ngClass]="'first'">Operaciòn realizada :<br>{{valor1}} + {{valor2}} = {{suma}}<br> La Suma es igual a {{suma}}</div>
+      <div *ngSwitchCase="'2'" [ngClass]="'second'">Operaciòn realizada :<br>{{valor1}} - {{valor2}} = {{resta}}<br> La Resta es igual a {{resta}}</div>
+      <div *ngSwitchCase="'3'" [ngClass]="'third'">Operaciòn realizada :<br>{{valor1}} * {{valor2}} = {{multipicacion}}<br> La Multiplicaciòn es igual a {{multipicacion}}</div>
+      <div *ngSwitchCase="'4'" [ngClass]="'fourth'">Operaciòn realizada :<br>{{valor1}} / {{valor2}} = {{division}}<br> La Division es igual a {{division}}</div>
+      <div *ngSwitchDefault>Seleccione una operaciòn</div>
+    </div>
+  </div>
+</div>
+</div>

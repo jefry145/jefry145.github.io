@@ -1,0 +1,28 @@
+#Formulario{
+    margin: 5%;
+}
+.content_form{
+    box-shadow: 2px 5px 8px 4px rgb(206, 206, 206);
+    width: 450px;
+    height: 310px;
+    border-radius: 20px;
+}
+.form-control{
+    width: 28% !important;
+}
+#list{
+    width: 36% !important;
+}
+/* class list */
+.first{
+    color: rgb(113, 201, 172);
+}
+.second{
+    color: rgb(189, 161, 83);
+}
+.third{
+    color: rgb(141, 50, 50);
+}
+.fourth{
+    color: rgb(54, 146, 153);
+} 
